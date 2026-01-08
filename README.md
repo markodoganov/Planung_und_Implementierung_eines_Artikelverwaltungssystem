@@ -1,0 +1,1 @@
+# Planung_und_Implementierung_eines_Artikelverwaltungssystem
