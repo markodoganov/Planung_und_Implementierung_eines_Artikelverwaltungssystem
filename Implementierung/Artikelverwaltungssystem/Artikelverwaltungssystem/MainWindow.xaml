@@ -1,0 +1,112 @@
+﻿<Window x:Class="Artikelverwaltungssystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Artikelverwaltungssystem" Height="600" Width="1200">
+
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Titel -->
+        <TextBlock Text="Artikelverwaltungssystem"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Margin="0,0,0,20"/>
+
+        <!-- Suchbereich -->
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1"
+                    Margin="0,0,0,10">
+
+            <TextBox Name="txtSuche"
+                     Width="250"
+                     Height="30"
+                     Margin="0,0,10,0"
+                     VerticalContentAlignment="Center"/>
+
+            <Button Content="Suchen"
+                    Width="100"
+                    Height="30"
+                    Margin="0,0,10,0"
+                    Click="BtnSuchen_Click"/>
+
+        </StackPanel>
+
+        <!-- Artikel anlegen -->
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="2"
+                    Margin="0,0,0,10">
+
+            <TextBox Name="txtBezeichnung"
+                     Width="120"
+                     Margin="5"/>
+
+            <TextBox Name="txtKategorie"
+                     Width="100"
+                     Margin="5"/>
+
+            <TextBox Name="txtInventarnummer"
+                     Width="120"
+                     Margin="5"/>
+
+            <TextBox Name="txtSeriennummer"
+                     Width="120"
+                     Margin="5"/>
+
+            <TextBox Name="txtStatus"
+                     Width="100"
+                     Margin="5"/>
+
+            <Button Content="Artikel speichern"
+                    Width="150"
+                    Margin="5"
+                    Click="BtnArtikelSpeichern_Click"/>
+
+        </StackPanel>
+
+        <!-- Artikelliste -->
+        <DataGrid Name="dgArtikel"
+                  Grid.Row="3"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Bezeichnung"
+                                    Binding="{Binding Bezeichnung}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="Kategorie"
+                                    Binding="{Binding Kategorie}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="Inventarnummer"
+                                    Binding="{Binding Inventarnummer}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="Seriennummer"
+                                    Binding="{Binding Seriennummer}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="Status"
+                                    Binding="{Binding Status}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="AbteilungsID"
+                                    Binding="{Binding AbteilungsID}"
+                                    Width="*"/>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </Grid>
+</Window>
