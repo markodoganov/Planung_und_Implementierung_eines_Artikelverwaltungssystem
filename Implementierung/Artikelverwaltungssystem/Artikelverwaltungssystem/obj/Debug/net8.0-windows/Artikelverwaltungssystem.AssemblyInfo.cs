@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Artikelverwaltungssystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3b3c3b6d400b7252496a168ae8e44349596d087")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+524941130377ad618f032232328df097cecf8076")]
 [assembly: System.Reflection.AssemblyProductAttribute("Artikelverwaltungssystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Artikelverwaltungssystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

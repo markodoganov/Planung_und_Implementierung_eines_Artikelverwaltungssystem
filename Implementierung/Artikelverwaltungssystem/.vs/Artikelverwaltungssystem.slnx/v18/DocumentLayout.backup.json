@@ -9,6 +9,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{DE37E76A-A58A-9893-9679-5388CF28D66C}|Artikelverwaltungssystem\\Artikelverwaltungssystem.csproj|c:\\planung_und_implementierung_eines_artikelverwaltungssystem\\implementierung\\artikelverwaltungssystem\\artikelverwaltungssystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DE37E76A-A58A-9893-9679-5388CF28D66C}|Artikelverwaltungssystem\\Artikelverwaltungssystem.csproj|solutionrelative:artikelverwaltungssystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE37E76A-A58A-9893-9679-5388CF28D66C}|Artikelverwaltungssystem\\Artikelverwaltungssystem.csproj|c:\\planung_und_implementierung_eines_artikelverwaltungssystem\\implementierung\\artikelverwaltungssystem\\artikelverwaltungssystem\\models\\artikel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE37E76A-A58A-9893-9679-5388CF28D66C}|Artikelverwaltungssystem\\Artikelverwaltungssystem.csproj|solutionrelative:artikelverwaltungssystem\\models\\artikel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE37E76A-A58A-9893-9679-5388CF28D66C}|Artikelverwaltungssystem\\Artikelverwaltungssystem.csproj|c:\\planung_und_implementierung_eines_artikelverwaltungssystem\\implementierung\\artikelverwaltungssystem\\artikelverwaltungssystem\\data\\artikeldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE37E76A-A58A-9893-9679-5388CF28D66C}|Artikelverwaltungssystem\\Artikelverwaltungssystem.csproj|solutionrelative:artikelverwaltungssystem\\data\\artikeldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,15 +34,38 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ArtikelDbContext.cs",
+              "DocumentMoniker": "C:\\Planung_und_Implementierung_eines_Artikelverwaltungssystem\\Implementierung\\Artikelverwaltungssystem\\Artikelverwaltungssystem\\Data\\ArtikelDbContext.cs",
+              "RelativeDocumentMoniker": "Artikelverwaltungssystem\\Data\\ArtikelDbContext.cs",
+              "ToolTip": "C:\\Planung_und_Implementierung_eines_Artikelverwaltungssystem\\Implementierung\\Artikelverwaltungssystem\\Artikelverwaltungssystem\\Data\\ArtikelDbContext.cs",
+              "RelativeToolTip": "Artikelverwaltungssystem\\Data\\ArtikelDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T17:16:08.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Artikel.cs",
+              "DocumentMoniker": "C:\\Planung_und_Implementierung_eines_Artikelverwaltungssystem\\Implementierung\\Artikelverwaltungssystem\\Artikelverwaltungssystem\\Models\\Artikel.cs",
+              "RelativeDocumentMoniker": "Artikelverwaltungssystem\\Models\\Artikel.cs",
+              "ToolTip": "C:\\Planung_und_Implementierung_eines_Artikelverwaltungssystem\\Implementierung\\Artikelverwaltungssystem\\Artikelverwaltungssystem\\Models\\Artikel.cs",
+              "RelativeToolTip": "Artikelverwaltungssystem\\Models\\Artikel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T17:15:37.721Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Planung_und_Implementierung_eines_Artikelverwaltungssystem\\Implementierung\\Artikelverwaltungssystem\\Artikelverwaltungssystem\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Artikelverwaltungssystem\\MainWindow.xaml",
-              "ToolTip": "C:\\Planung_und_Implementierung_eines_Artikelverwaltungssystem\\Implementierung\\Artikelverwaltungssystem\\Artikelverwaltungssystem\\MainWindow.xaml*",
-              "RelativeToolTip": "Artikelverwaltungssystem\\MainWindow.xaml*",
+              "ToolTip": "C:\\Planung_und_Implementierung_eines_Artikelverwaltungssystem\\Implementierung\\Artikelverwaltungssystem\\Artikelverwaltungssystem\\MainWindow.xaml",
+              "RelativeToolTip": "Artikelverwaltungssystem\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-18T17:48:50.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-30T16:53:10.048Z"
             },
             {
               "$type": "Document",
@@ -42,9 +73,9 @@
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Planung_und_Implementierung_eines_Artikelverwaltungssystem\\Implementierung\\Artikelverwaltungssystem\\Artikelverwaltungssystem\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Artikelverwaltungssystem\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Planung_und_Implementierung_eines_Artikelverwaltungssystem\\Implementierung\\Artikelverwaltungssystem\\Artikelverwaltungssystem\\MainWindow.xaml.cs*",
-              "RelativeToolTip": "Artikelverwaltungssystem\\MainWindow.xaml.cs*",
-              "ViewState": "AgIAACAAAAAAAAAAAAAuwEMAAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Planung_und_Implementierung_eines_Artikelverwaltungssystem\\Implementierung\\Artikelverwaltungssystem\\Artikelverwaltungssystem\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Artikelverwaltungssystem\\MainWindow.xaml.cs",
+              "ViewState": "AgIAACgAAADo//////87wDQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T16:37:19.189Z",
               "EditorCaption": ""

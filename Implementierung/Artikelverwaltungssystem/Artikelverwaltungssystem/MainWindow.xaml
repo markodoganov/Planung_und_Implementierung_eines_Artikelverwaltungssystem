@@ -4,79 +4,121 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Artikelverwaltungssystem" Height="600" Width="1200">
+        Title="Artikelverwaltungssystem"
+        Height="650"
+        Width="1200">
 
-    <Grid Margin="10">
+    <Grid Margin="15">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Titel -->
-        <TextBlock Text="Artikelverwaltungssystem"
-                   FontSize="24"
-                   FontWeight="Bold"
-                   Margin="0,0,0,20"/>
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Artikelverwaltungssystem"
+                       FontSize="28"
+                       FontWeight="Bold"/>
 
-        <!-- Suchbereich -->
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="1"
-                    Margin="0,0,0,10">
-
-            <TextBox Name="txtSuche"
-                     Width="250"
-                     Height="30"
-                     Margin="0,0,10,0"
-                     VerticalContentAlignment="Center"/>
-
-            <Button Content="Suchen"
-                    Width="100"
-                    Height="30"
-                    Margin="0,0,10,0"
-                    Click="BtnSuchen_Click"/>
-
+            <TextBlock Text="Verwaltung von Inventarartikeln"
+                       FontSize="14"
+                       Foreground="Gray"/>
         </StackPanel>
 
-        <!-- Artikel anlegen -->
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="2"
-                    Margin="0,0,0,10">
+        <GroupBox Header="Artikel suchen"
+                  Grid.Row="1"
+                  Margin="0,0,0,15">
 
-            <TextBox Name="txtBezeichnung"
-                     Width="120"
-                     Margin="5"/>
+            <StackPanel Orientation="Horizontal" Margin="10">
 
-            <TextBox Name="txtKategorie"
-                     Width="100"
-                     Margin="5"/>
+                <TextBox Name="txtSuche"
+                         Width="300"
+                         Height="30"
+                         TextChanged="TxtSuche_TextChanged"/>
 
-            <TextBox Name="txtInventarnummer"
-                     Width="120"
-                     Margin="5"/>
+            </StackPanel>
 
-            <TextBox Name="txtSeriennummer"
-                     Width="120"
-                     Margin="5"/>
+        </GroupBox>
 
-            <TextBox Name="txtStatus"
-                     Width="100"
-                     Margin="5"/>
+        <GroupBox Header="Artikel anlegen / bearbeiten"
+                  Grid.Row="2"
+                  Margin="0,0,0,15">
 
-            <Button Content="Artikel speichern"
-                    Width="150"
-                    Margin="5"
-                    Click="BtnArtikelSpeichern_Click"/>
+            <StackPanel Margin="10">
 
-        </StackPanel>
+                <WrapPanel>
 
-        <!-- Artikelliste -->
+                    <StackPanel Margin="5">
+                        <TextBlock Text="Bezeichnung"/>
+                        <TextBox Name="txtBezeichnung" Width="140"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="5">
+                        <TextBlock Text="Kategorie"/>
+                        <TextBox Name="txtKategorie" Width="120"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="5">
+                        <TextBlock Text="Inventarnummer"/>
+                        <TextBox Name="txtInventarnummer" Width="140"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="5">
+                        <TextBlock Text="Seriennummer"/>
+                        <TextBox Name="txtSeriennummer" Width="140"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="5">
+                        <TextBlock Text="Status"/>
+                        <TextBox Name="txtStatus" Width="120"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="5">
+                        <TextBlock Text="Abteilung"/>
+                        <ComboBox Name="cmbAbteilung"
+                                  Width="140"
+                                  DisplayMemberPath="Name"
+                                  SelectedValuePath="AbteilungsID"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="5"
+                                VerticalAlignment="Bottom">
+
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,20,0,0">
+
+                            <Button Content="Artikel speichern"
+                                    Width="150"
+                                    Height="30"
+                                    Margin="0,0,10,0"
+                                    Click="BtnArtikelSpeichern_Click"/>
+
+                            <Button Content="Artikel aktualisieren"
+                                    Width="150"
+                                    Height="30"
+                                    Click="BtnArtikelAktualisieren_Click"/>
+
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </WrapPanel>
+
+            </StackPanel>
+
+        </GroupBox>
+
         <DataGrid Name="dgArtikel"
+                  ItemsSource="{Binding ArtikelListe}"
+                  SelectionChanged="dgArtikel_SelectionChanged"
                   Grid.Row="3"
                   AutoGenerateColumns="False"
-                  IsReadOnly="True">
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  Margin="0,0,0,10">
 
             <DataGrid.Columns>
 
@@ -100,13 +142,25 @@
                                     Binding="{Binding Status}"
                                     Width="*"/>
 
-                <DataGridTextColumn Header="AbteilungsID"
-                                    Binding="{Binding AbteilungsID}"
-                                    Width="*"/>
+                <DataGridTextColumn Header="Abteilung"
+                    Binding="{Binding AbteilungsID}"
+                    Width="*"/>
 
             </DataGrid.Columns>
 
         </DataGrid>
 
+        <StackPanel Grid.Row="4"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+
+            <Button Content="Ausgewählten Artikel löschen"
+                    Width="220"
+                    Height="35"
+                    Click="BtnLoeschen_Click"/>
+
+        </StackPanel>
+
     </Grid>
+
 </Window>
