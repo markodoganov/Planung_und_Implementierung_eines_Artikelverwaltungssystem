@@ -151,13 +151,25 @@
         </DataGrid>
 
         <StackPanel Grid.Row="4"
-                    Orientation="Horizontal"
-                    HorizontalAlignment="Right">
+            Orientation="Horizontal"
+            HorizontalAlignment="Right">
+
+            <Button Content="Verbrauch buchen"
+            Width="180"
+            Height="35"
+            Margin="0,0,10,0"
+            Click="BtnVerbrauch_Click"/>
+
+            <Button Content="Historie anzeigen"
+            Width="180"
+            Height="35"
+            Margin="0,0,10,0"
+            Click="BtnHistorie_Click"/>
 
             <Button Content="Ausgewählten Artikel löschen"
-                    Width="220"
-                    Height="35"
-                    Click="BtnLoeschen_Click"/>
+            Width="220"
+            Height="35"
+            Click="BtnLoeschen_Click"/>
 
         </StackPanel>
 

@@ -1,0 +1,41 @@
+﻿<Window x:Class="Artikelverwaltungssystem.HistorieWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Historie"
+        Height="450"
+        Width="900">
+
+    <Grid Margin="10">
+
+        <DataGrid Name="dgHistorie"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Artikel ID"
+                                    Binding="{Binding ArtikelID}"
+                                    Width="100"/>
+
+                <DataGridTextColumn Header="Alte Abteilung"
+                                    Binding="{Binding AlteAbteilung}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="Neue Abteilung"
+                                    Binding="{Binding NeueAbteilung}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="Geändert am"
+                                    Binding="{Binding GeaendertAm}"
+                                    Width="200"/>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </Grid>
+
+</Window>

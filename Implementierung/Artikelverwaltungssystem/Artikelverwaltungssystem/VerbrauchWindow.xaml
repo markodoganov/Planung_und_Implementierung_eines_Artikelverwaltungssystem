@@ -1,0 +1,78 @@
+﻿<Window x:Class="Artikelverwaltungssystem.VerbrauchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Verbrauch buchen"
+        Height="500"
+        Width="700">
+
+    <Grid Margin="15">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Verbrauch buchen"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    Margin="0,0,0,10">
+
+            <TextBlock Text="Verbrauchsart:"
+                       Width="120"
+                       VerticalAlignment="Center"/>
+
+            <ComboBox Name="cmbVerbrauchsart"
+                      Width="250"
+                      DisplayMemberPath="Bezeichnung"
+                      SelectedValuePath="VerbrauchsartID"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    Margin="0,0,0,10">
+
+            <TextBlock Text="Abteilung:"
+                       Width="120"
+                       VerticalAlignment="Center"/>
+
+            <ComboBox Name="cmbAbteilung"
+                      Width="250"
+                      DisplayMemberPath="Name"
+                      SelectedValuePath="AbteilungsID"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3"
+                    Orientation="Horizontal"
+                    Margin="0,0,0,10">
+
+            <TextBlock Text="Menge:"
+                       Width="120"
+                       VerticalAlignment="Center"/>
+
+            <TextBox Name="txtMenge"
+                     Width="250"/>
+        </StackPanel>
+
+        <Button Grid.Row="3"
+                Content="Verbrauch buchen"
+                Width="180"
+                Height="35"
+                HorizontalAlignment="Right"
+                Click="BtnBuchen_Click"/>
+
+        <DataGrid Name="dgVerbrauch"
+                  Grid.Row="4"
+                  Margin="0,20,0,0"
+                  AutoGenerateColumns="True"
+                  IsReadOnly="True"/>
+
+    </Grid>
+
+</Window>

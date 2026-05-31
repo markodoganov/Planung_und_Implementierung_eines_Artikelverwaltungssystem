@@ -14,6 +14,8 @@ namespace Artikelverwaltungssystem
 
         private Artikel ausgewaehlterArtikel;
 
+        private int alteAbteilungsID;
+
         private ObservableCollection<Artikel> _artikelListe;
 
         public ObservableCollection<Artikel> ArtikelListe
@@ -68,6 +70,7 @@ namespace Artikelverwaltungssystem
         private void dgArtikel_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ausgewaehlterArtikel = dgArtikel.SelectedItem as Artikel;
+            alteAbteilungsID = ausgewaehlterArtikel.AbteilungsID;
 
             if (ausgewaehlterArtikel == null)
                 return;
@@ -120,6 +123,32 @@ namespace Artikelverwaltungssystem
                 return;
             }
 
+            int neueAbteilungsID =
+                (int)cmbAbteilung.SelectedValue;
+
+            if (alteAbteilungsID != neueAbteilungsID)
+            {
+                string alteAbteilung =
+                    _context.Abteilungen
+                        .First(a => a.AbteilungsID == alteAbteilungsID)
+                        .Name;
+
+                string neueAbteilung =
+                    _context.Abteilungen
+                        .First(a => a.AbteilungsID == neueAbteilungsID)
+                        .Name;
+
+                Historie historie = new Historie
+                {
+                    ArtikelID = ausgewaehlterArtikel.ArtikelID,
+                    AlteAbteilung = alteAbteilung,
+                    NeueAbteilung = neueAbteilung,
+                    GeaendertAm = DateTime.Now
+                };
+
+                _context.Historien.Add(historie);
+            }
+
             ausgewaehlterArtikel.Bezeichnung =
                 txtBezeichnung.Text;
 
@@ -136,7 +165,7 @@ namespace Artikelverwaltungssystem
                 txtStatus.Text;
 
             ausgewaehlterArtikel.AbteilungsID =
-                (int)cmbAbteilung.SelectedValue;
+                neueAbteilungsID;
 
             _context.SaveChanges();
 
@@ -176,6 +205,22 @@ namespace Artikelverwaltungssystem
 
                 MessageBox.Show("Artikel wurde gelöscht.");
             }
+        }
+
+        private void BtnHistorie_Click(object sender, RoutedEventArgs e)
+        {
+            HistorieWindow historieWindow =
+                new HistorieWindow();
+
+            historieWindow.ShowDialog();
+        }
+
+        private void BtnVerbrauch_Click(object sender, RoutedEventArgs e)
+        {
+            VerbrauchWindow verbrauchWindow =
+                new VerbrauchWindow();
+
+            verbrauchWindow.ShowDialog();
         }
 
         private void LeereFelder()
